@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    const imgs = [
+      "https://i.ibb.co/ns8Y3LD8/wr1.jpg",
+      "https://i.ibb.co/dJzKsRVG/wr2.jpg",
+      "https://i.ibb.co/Z6JVSBF0/wr3.jpg",
+      "https://i.ibb.co/gZjddCD6/wr4.jpg"
+    ];
+
+    const key = "wr-avatar-index";
+    let index = parseInt(localStorage.getItem(key) || "0");
+    index = (index + 1) % imgs.length;
+    localStorage.setItem(key, index);
+    location.replace(imgs[index]);
+  </script>
+</head>
+<body></body>
+</html>
